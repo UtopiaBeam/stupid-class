@@ -29,7 +29,7 @@ app.post('/addUser', (req, res) => {
     }
 });
 
-app.delete('/deleteUser/:id', (req, res) => {
+app.post('/deleteUser/:id', (req, res) => {
     const { id } = req.params;
     if (id < 0 || id >= users.length) {
         res.status(400).send({
